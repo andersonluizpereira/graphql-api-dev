@@ -22,7 +22,8 @@
     "gulp-clean": "0.3.2",
     "gulp-typescript": "3.2.2",
     "nodemon": "1.12.0",
-    "typescript": "2.5.3"
+    "pg": "^7.11.0",
+    "typescript": "2.9.2"
   },
   "dependencies": {
     "bcryptjs": "2.4.3",
