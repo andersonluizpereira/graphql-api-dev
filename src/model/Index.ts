@@ -3,8 +3,6 @@ import * as path from 'path';
 import * as Sequelize from 'sequelize';
 import { DbConnection } from '../interfaces/DbConnectionInterface';
 
-const basename: string = path.basename(module.filename);
-
 const env: string = process.env.NODE_ENV.trim() || 'development';
 let config = require(path.resolve(`${__dirname}./../config/config.json`))[env];
 
@@ -22,7 +20,7 @@ if(!db) {
     fs.readdirSync(__dirname)
     .filter((file: string) => {
         const fileSlice: string = file.slice(-3);
-        return (file.indexOf('.') !== 0) && (file !== basename) && ((fileSlice === '.js') || (fileSlice === '.ts'));
+        return (file.indexOf('.') !== 0) && (file !== 'Index.js') && ((fileSlice === '.js') || (fileSlice === '.ts'));
     })
     .forEach((file: string) => {
         const model = sequelize.import(path.join(__dirname, file));
