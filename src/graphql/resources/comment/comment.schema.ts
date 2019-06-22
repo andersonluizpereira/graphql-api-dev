@@ -3,7 +3,7 @@ const commentTypes = `
         id: ID!
         comment: String!
         createdAt: String!
-        updateAt: String!
+        updatedAt: String!
         user: User!
         post: Post!
     }
@@ -16,7 +16,7 @@ const commentTypes = `
 `;
 
 const commentQueries = `
-    commentsByPost(postId: ID! first: Int, offet: Int): [ Comment! ]!
+    commentByPost(postId: ID! first: Int, offet: Int): [ Comment! ]!
 `;
 
 const commentMutations = `

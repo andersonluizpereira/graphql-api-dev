@@ -46,7 +46,7 @@ export const userResolvers = {
                 return db.User
                 .findById(id).then((user: UserInstance) => {
                     if(!user) throw new Error(`User with id ${id} not found!`);
-                    user.update(input, {transaction :t});
+                   return user.update(input, {transaction :t});
                 });
             }).catch(handleError);
         },
