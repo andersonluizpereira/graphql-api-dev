@@ -37,7 +37,7 @@ export const commentResolvers = {
         updateComment: (parent, {id, input}, {db}: {db: DbConnection}, info: GraphQLResolveInfo) => {
             id  = parseInt(id);
             return db.sequelize.transaction((t: Transaction) => {
-                return db.Post
+                return db.Comment
                 .findById(id)
                 .then((commentt: CommentInstance) =>{
                     if(!commentt) throw new Error(`Comment with id ${id} not found!`);
