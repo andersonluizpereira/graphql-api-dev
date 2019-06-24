@@ -16,7 +16,7 @@ export const tokenResolvers = {
                 const payload = { sub: user.get('id')};
 
                 return {
-                    token: jwt.sign(payload, JWT_SECRET)
+                    token: jwt.sign(payload, JWT_SECRET, { expiresIn: '1h' })
                 }
             });
         }
