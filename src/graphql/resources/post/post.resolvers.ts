@@ -35,7 +35,7 @@ export const postResolvers = {
             return db.Post
                     .findById(id)
                     .then((post: PostInstance) =>{
-                        if(!post) throw new Error(`Post with id ${id} not found!`);
+                        throwError(!post,`Post with id ${id} not found!`);
                         return post;
 
                     }).catch(handleError);
