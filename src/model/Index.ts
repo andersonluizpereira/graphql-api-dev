@@ -10,7 +10,9 @@ let db = null;
 
 if(!db) {
     db = {}
-    const operatorsAliases = false;
+    const operatorsAliases = {
+        $in: Sequelize.Op.in
+    };
 
     config = Object.assign({ operatorsAliases }, config);
 
