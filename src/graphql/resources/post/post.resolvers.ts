@@ -12,11 +12,9 @@ import { DataLoaders } from "../../../interfaces/DataLoadersInterface";
 export const postResolvers = {
 
     Post: {
-        author: (post, args, {db, dataLoaders: {userLoader}}: {db: DbConnection, dataLoaders: DataLoaders}, info: GraphQLResolveInfo) => {
+        author: (post, args, {db, dataloaders: {userLoader}}: {db: DbConnection, dataloaders: DataLoaders}, info: GraphQLResolveInfo) => {
             return userLoader
-            .load(post.get('author'));
-            // return db.User
-            //     .findById(post.get('author')).catch(handleError);
+            .load(post.get('author')).catch(handleError);
         },
         comments: (post, { first = 10, offset = 0}, {db}: {db: DbConnection}, info: GraphQLResolveInfo) => {
             return db.Comment.findAll({
