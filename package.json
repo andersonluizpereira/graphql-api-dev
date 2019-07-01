@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "docker_start": "docker start docker_db_1",
+    "docker_stop": "docker stop docker_db_1",
     "gulp": "node_modules/.bin/gulp",
     "dev": "NODE_ENV=development JWT_SECRET=iron_man node_modules/.bin/nodemon --delay 5 dist/index",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -33,6 +35,7 @@
     "express": "4.16.2",
     "express-graphql": "0.6.11",
     "graphql": "0.11.7",
+    "graphql-fields": "^2.0.3",
     "graphql-tools": "2.3.0",
     "jsonwebtoken": "8.1.0",
     "lodash": "4.17.4",
