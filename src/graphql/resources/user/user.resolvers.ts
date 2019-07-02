@@ -27,7 +27,7 @@ export const userResolvers = {
             return context.db.User.findAll({
                 limit: first,
                 offset: offset,
-                attributes: context.requestedFields.getFields(info, {keep:['id'], exclude: ['comments']})
+                attributes: context.requestedFields.getFields(info, {keep:['id'], exclude: ['posts']})
             }).catch(handleError);
         },
         user: (parent, {id}, context: ResolverContext, info: GraphQLResolveInfo) => {
