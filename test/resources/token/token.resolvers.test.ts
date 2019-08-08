@@ -1,4 +1,4 @@
-import { chai, db, handleError, app, expect } from '../test-utils';
+import { chai, db, handleError, app, expect } from './../../test-utils';
 
 describe('Token', () => {
 

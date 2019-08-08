@@ -1,6 +1,6 @@
 const userTypes = `
-    #User definition type
 
+    # User definition type
     type User {
         id: ID!
         name: String!
@@ -8,7 +8,7 @@ const userTypes = `
         photo: String
         createdAt: String!
         updatedAt: String!
-        posts(first: Int, offset: Int): [Post!]!
+        posts(first: Int, offset: Int): [ Post! ]!
     }
 
     input UserCreateInput {
@@ -20,7 +20,7 @@ const userTypes = `
     input UserUpdateInput {
         name: String!
         email: String!
-        photo: String
+        photo: String!
     }
 
     input UserUpdatePasswordInput {
@@ -30,7 +30,7 @@ const userTypes = `
 `;
 
 const userQueries = `
-    users(first: Int, offset: Int): [User! ]!
+    users(first: Int, offset: Int): [ User! ]!
     user(id: ID!): User
     currentUser: User
 `;

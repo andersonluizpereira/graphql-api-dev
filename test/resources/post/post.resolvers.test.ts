@@ -1,9 +1,9 @@
 import * as jwt from 'jsonwebtoken';
 
-import { chai, db, app, expect, handleError } from '../test-utils';
-import { UserInstance } from '../../../src/model/UserModel';
+import { chai, db, app, expect, handleError } from './../../test-utils';
+import { UserInstance } from '../../../src/models/UserModel';
 import { JWT_SECRET } from '../../../src/utils/utils';
-import { PostInstance } from '../../../src/model/PostModel';
+import { PostInstance } from '../../../src/models/PostModel';
 
 describe('Post', () => {
 

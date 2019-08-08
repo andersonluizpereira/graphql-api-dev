@@ -1,7 +1,7 @@
 import * as jwt from 'jsonwebtoken';
 
-import { app, db, chai, handleError, expect } from '../test-utils';
-import { UserInstance } from '../../../src/model/UserModel';
+import { app, db, chai, handleError, expect } from './../../test-utils';
+import { UserInstance } from '../../../src/models/UserModel';
 import { JWT_SECRET } from '../../../src/utils/utils';
 
 describe('User', () => {
@@ -351,7 +351,7 @@ describe('User', () => {
                             expect(res.body.data.updateUser).to.be.null;
                             expect(res.body).to.have.keys(['data', 'errors']);
                             expect(res.body.errors).to.be.an('array');
-                            expect(res.body.errors[0].message).to.equal('JsonWebTokenError: jwt malformed');
+                            expect(res.body.errors[0].message).to.equal('JsonWebTokenError: jwt malformed =Error verify-token');
                         }).catch(handleError);
 
                 });

@@ -1,9 +1,11 @@
-import { PostModel } from "../model/PostModel";
-import { UserModel } from "../model/UserModel";
-import { CommentModel } from "../model/CommentModel";
+import { CommentModel } from "../models/CommentModel";
+import { PostModel } from "../models/PostModel";
+import { UserModel } from "../models/UserModel";
 
 export interface ModelsInterface {
+
+    Comment: CommentModel;
     Post: PostModel;
     User: UserModel;
-    Comment: CommentModel;
+
 }
